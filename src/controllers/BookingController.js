@@ -11,7 +11,7 @@ module.exports = {
             spot: spot_id,
             date,
         });
-
+        console.log('aqui')
         await booking.populate('spot').populate('user').execPopulate();
 
         const ownerSocket = req.connectedUsers[booking.spot.user];
